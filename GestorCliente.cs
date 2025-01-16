@@ -1,4 +1,5 @@
 ﻿using AppConsola.Constructores;
+using AppConsola.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,6 +64,18 @@ namespace AppConsola
                 if(cliente != null)
                 {
                     Console.WriteLine($"Puntos: {cliente.Puntos}");
+                }
+            }
+        }
+
+        public static void listarClientes()
+        {
+            using(var contexto = new ContextoBd())
+            {
+                var clientes = contexto.Clientes.ToList();
+                foreach(var cliente in clientes)
+                {
+                    Console.WriteLine($"Id: {cliente.IdCliente} - Nombre: {cliente.Nombre}");
                 }
             }
         }

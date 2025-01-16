@@ -22,9 +22,12 @@
                         GestorCliente.registrarCliente();
                         break;
                     case 4:
-                        GestorCompra.realizarCompra();
+                        GestorCliente.listarClientes();
                         break;
                     case 5:
+                        GestorCompra.realizarCompra();
+                        break;
+                    case 6:
                         n = 1;
                         break;
                 }
@@ -36,8 +39,9 @@
             Console.WriteLine("1 - Agregar producto");
             Console.WriteLine("2 - Listar productos");
             Console.WriteLine("3 - Agregar cliente");
-            Console.WriteLine("4 - Realizar compra");
-            Console.WriteLine("5 - Salir");
+            Console.WriteLine("4 - Ver clientes");
+            Console.WriteLine("5 - Realizar compra");
+            Console.WriteLine("6 - Salir");
             int opcion = int.Parse(Console.ReadLine());
             return opcion;
         }
